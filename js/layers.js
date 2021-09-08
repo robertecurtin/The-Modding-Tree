@@ -13,13 +13,6 @@ addLayer("b", {
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
-    upgrades: {
-      11: {
-        title: "Six-packs",
-	description: "Buy six bottles at a time",
-	cost: new Decimal(12)
-      },
-    },
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
         return mult
@@ -29,7 +22,14 @@ addLayer("b", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "p", description: "P: Buy a beer", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "b", description: "B: Buy beer", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+    upgrades: {
+      11: {
+        title: "Six-packs",
+	description: "Buy six bottles at a time",
+	cost: new Decimal(12)
+      },
+    },
 })
