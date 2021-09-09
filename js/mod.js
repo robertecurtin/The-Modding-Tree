@@ -2,7 +2,7 @@ let modInfo = {
 	name: "The Brewing Tree",
 	id: "brewing",
 	author: "Robert Curtin",
-	pointsName: "beers",
+	pointsName: "dollars",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
